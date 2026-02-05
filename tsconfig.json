@@ -12,6 +12,8 @@
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
     "app/(tabs)/Quotes.jsx",
-    "app/(tabs)/Portfolio.jsx"
+    "app/(tabs)/Portfolio.jsx",
+    "app/(tabs)/Trade.jsx",
+    "app/(tabs)/History.jsx"
   ]
 }
