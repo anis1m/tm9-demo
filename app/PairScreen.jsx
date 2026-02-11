@@ -1,15 +1,16 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Stack, useRouter } from "expo-router";
 import {
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function PairScreen() {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
 
   const tableData = [
     { tf: "5m", trend: "BUY", candle: "SELL" },
@@ -91,7 +92,7 @@ export default function PairScreen() {
       </View>
 
       {/* Bottom Bar */}
-      <View style={styles.bottomBar}>
+      <View style={[styles.bottomBar, { paddingBottom: insets.bottom + 8 }]}>
         <TouchableOpacity style={styles.sellButton}>
           <Text style={styles.sellText}>SELL</Text>
           <Text style={styles.sellSub}>at 1.19111</Text>
