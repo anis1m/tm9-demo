@@ -154,7 +154,7 @@ function DrawerItem({ icon, label, badge, lib, onClose }) {
             onClose();
             break;
           case "Register":
-            router.push("/OpenAccount");
+            router.push("/Broker");
             onClose();
             break;
           default:
